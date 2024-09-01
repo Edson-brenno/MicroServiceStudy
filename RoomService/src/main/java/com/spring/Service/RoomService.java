@@ -1,6 +1,8 @@
 package com.spring.Service;
 
 import com.spring.Dto.RoomDto;
+import com.spring.Dto.RoomRegisterDto;
+import com.spring.Entity.Room;
 import com.spring.Repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +29,14 @@ public class RoomService {
      * @return the room by the id*/
     public RoomDto getRoomById(Long id) {
         return new RoomDto(roomRepository.findById(id).get());
+    }
+
+    /**
+     * Register a new room
+     * @param roomRegisterDto dto with needed information to register a room*/
+    public RoomDto registerRoom(RoomRegisterDto roomRegisterDto) {
+        Room room = new Room(roomRegisterDto.name(), roomRegisterDto.capacity());
+
+        return new RoomDto(roomRepository.save(room));
     }
 }
