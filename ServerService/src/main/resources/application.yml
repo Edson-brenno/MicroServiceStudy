@@ -8,6 +8,7 @@ spring:
           uri: https://github.com/Edson-brenno/MicroServiceStudy.git
           search-paths:
             - ConfigRepository/naming-server
+            - ConfigRepository/apigateway-service
 
 server:
   port: 8888
