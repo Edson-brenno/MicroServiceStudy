@@ -13,6 +13,6 @@ public class FlywayMigrationConfig {
         return flyway -> {
             flyway.repair();
             flyway.migrate();
-        }
+        };
     }
 }
