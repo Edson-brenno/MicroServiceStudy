@@ -12,3 +12,9 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
+        - id: room-service
+          uri: lb://room-service
+          predicates:
+            - Path=/rooms/**
+          filters:
+            - RewritePath=/rooms/(?<segment>.*), /rooms/$\{segment}
