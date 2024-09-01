@@ -5,3 +5,6 @@ spring:
     active: dev
   config:
     import: configserver:http://localhost:8888/
+  sleuth:
+    sampler:
+      probability: 1.0
