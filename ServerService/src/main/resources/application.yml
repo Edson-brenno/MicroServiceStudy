@@ -9,6 +9,7 @@ spring:
           search-paths:
             - ConfigRepository/naming-server
             - ConfigRepository/apigateway-service
+            - ConfigRepository/room-service
 
 server:
   port: 8888
