@@ -7,6 +7,7 @@ spring:
         git:
           uri: https://github.com/Edson-brenno/MicroServiceStudy.git
           search-paths:
+            - ConfigRepository/naming-server
 
 server:
   port: 8888
