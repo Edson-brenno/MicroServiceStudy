@@ -20,4 +20,12 @@ public class RoomService {
                 .stream()
                 .map(RoomDto::new).toList();
     }
+
+    /**
+     * Return a room by the id
+     * @param id id of the room
+     * @return the room by the id*/
+    public RoomDto getRoomById(Long id) {
+        return new RoomDto(roomRepository.findById(id).get());
+    }
 }
