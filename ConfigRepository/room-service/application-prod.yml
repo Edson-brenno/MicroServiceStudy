@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    datasource:
+      url: ${DB_URL}
+      password: ${DB_PASSWORD}
+      username: ${DB_USER}
+      driver-class-name: org.postgresql.Driver
+    flyway:
+      url: ${DB_URL}
+      password: ${DB_PASSWORD}
+      user: ${DB_USER}
+      enabled: true
+      locations: classpath:db/migration
+      baseline-on-migrate: true
+
+server:
+  port: 0
+  error:
+    include-message: never
+    include-stacktrace: never
