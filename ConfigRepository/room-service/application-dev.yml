@@ -16,4 +16,4 @@ spring:
     locations: classpath:db/migration
 
 server:
-  port: 0
+  port: 8081

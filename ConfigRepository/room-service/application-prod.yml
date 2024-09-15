@@ -16,7 +16,7 @@ spring:
       baseline-on-migrate: true
 
 server:
-  port: 0
+  port: 8081
   error:
     include-message: never
     include-stacktrace: never

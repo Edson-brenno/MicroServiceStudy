@@ -3,8 +3,10 @@ spring:
     name: room-service
   profiles:
     active: dev
-  config:
-    import: configserver:http://localhost:8888/
   sleuth:
     sampler:
       probability: 1.0
+  config:
+    import: configserver:http://localhost:8888/
+server:
+  port: 8081

@@ -2,6 +2,18 @@ spring:
   application:
     name: naming-server
   config:
-    import: configserver:http://localhost:8888/
+    import: optional:configserver:http://localhost:8888/
   profiles:
     active: dev
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    root: debug
+server:
+  port: 8761
