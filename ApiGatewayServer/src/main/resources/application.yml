@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   config:
-    import: optional:configserver:http://localhost:8888/
+    import: configserver:http://localhost:8888/
   cloud:
     gateway:
       discovery:
@@ -18,3 +18,5 @@ spring:
             - Path=/rooms/**
           filters:
             - RewritePath=/rooms/(?<segment>.*), /rooms/$\{segment}
+server:
+  port: 8765
